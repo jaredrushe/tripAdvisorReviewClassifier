@@ -1,3 +1,5 @@
-# 2024-csc1052-master
+# 2024-csc1052-rushej2
 
-This is the master repository for the CSC1052 Application Domains I module. Fork this repository, rename your fork, make it private and start working. See the CSC1052 loop page for more information.
+Jared Rushe (rushej2)
+CSC1052 Application Domains I 
+Assignment 1 Reposistory
