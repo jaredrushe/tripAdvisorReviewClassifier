@@ -4,4 +4,4 @@ Jared Rushe (rushej2)
 
 CSC1052 Application Domains I 
 
-Assignment 1 Reposistory
+This repository contains all of my submissions for Assignments 1-4.
