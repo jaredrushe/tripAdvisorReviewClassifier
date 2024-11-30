@@ -3,14 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A3</title>
+    <title>Hotel Review Star Rating Predictor</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        textarea, select, button {
+            font-size: 16px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        select {
+            background-color: #f9f9f9;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            font-size: 14px;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h1>CSC1052 Film Review Classifier</h1>
-    <p>Enter your review here:</p>
-    <form action="/predict" method="post">
-        <textarea name="review" rows="5" cols="40"></textarea><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="container">
+        <h1>Hotel Review Star Rating Predictor</h1>
+        <form action="/predict" method="post">
+            <label for="review">Enter your review:</label><br>
+            <textarea name="review" rows="4" required></textarea><br>
+
+            <label for="model">Select a model:</label><br>
+            <select name="model" required>
+                {% for model_name in models %}
+                    <option value="{{ model_name }}">{{ model_name }}</option>
+                {% endfor %}
+            </select><br>
+
+            <button type="submit">Predict</button>
+        </form>
+        <p class="footer">Powered by Flask & Machine Learning Models</p>
+    </div>
 </body>
 </html>

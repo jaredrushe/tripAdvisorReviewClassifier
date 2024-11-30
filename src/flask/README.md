@@ -1,3 +1,3 @@
-# Movie Review Classifier Web App
+# Hotel Review Star Classifier Web App
 
-This Flask web application allows users to input a movie review and receive a sentiment prediction (positive or negative) using a pre-trained Naive Bayes model. The model and vocabulary have been saved in `.pkl` files for ease of use.
+This Flask web application allows users to input a hotel review and receive a star prediction (1 - 5) using a pre-trained One vs Rest multiclass classification model. Users can select between Logistic Regression, Multinomial Naive Bayes or Random Forest to be used as the binary algorithm within the classifier. The models have been saved in `.pkl` files for ease of use.
